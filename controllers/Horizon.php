@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Response;
  */
 class Horizon extends Controller
 {
+    public $requiredPermissions = ['jacob.horizon.access'];
+
     public function __construct()
     {
         parent::__construct();
