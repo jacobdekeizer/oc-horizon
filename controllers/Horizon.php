@@ -1,11 +1,8 @@
 <?php namespace Jacob\Horizon\Controllers;
 
-use BackendMenu;
 use Backend\Classes\Controller;
+use Backend\Classes\NavigationManager;
 
-/**
- * Horizon Back-end Controller
- */
 class Horizon extends Controller
 {
     public $requiredPermissions = ['jacob.horizon.access'];
@@ -14,7 +11,7 @@ class Horizon extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Jacob.Horizon', 'horizon', 'horizon');
+        NavigationManager::instance()->setContext('Jacob.Horizon', 'horizon', 'horizon');
     }
 
     public function index()

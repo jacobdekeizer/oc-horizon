@@ -1,13 +1,19 @@
 <?php
 
-Route::group([
+use Illuminate\Routing\Router;
+use Jacob\Horizon\Classes\Controllers\HorizonFileController;
+
+/** @var Router $router */
+$router = resolve(Router::class);
+
+$router->group([
     'prefix' => 'vendor/horizon',
-    'namespace' => 'Jacob\Horizon\Classes\Controllers'
-], function () {
-    Route::get('js/app.js', 'HorizonFileController@appJS');
+], static function() use ($router) {
+    $router->get('app.js', [HorizonFileController::class, 'appJs']);
 
-    Route::get('css/app.css', 'HorizonFileController@appCSS');
+    $router->get('app.css', [HorizonFileController::class, 'appCss']);
 
-    Route::get('img/horizon.svg', 'HorizonFileController@horizonSVG');
+    $router->get('app-dark.css', [HorizonFileController::class, 'appDarkCss']);
+
+    $router->get('img/horizon.svg', [HorizonFileController::class, 'horizonSvg']);
 });
-
