@@ -2,3 +2,5 @@
     - First version of Horizon
 1.0.2:
     - Use static path for horizon icon svg
+2.0.0:
+    - !!! Add support for laravel 6. Only update to this version if you are on october 1.1.x and read the README for the new laravel horizon requirements.

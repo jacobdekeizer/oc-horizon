@@ -2,7 +2,7 @@ Laravel horizon plugin for OctoberCMS
 =
 Provide [Laravel Horizon](https://horizon.laravel.com/) inside your OctoberCMS application.
 
-> Minimal requirement : OctoberCMS 4xx TODO
+> Minimal requirement : OctoberCMS 1.1.x
 
 ## Setup
 > Requirement : Redis queue and PHP >=7.2
